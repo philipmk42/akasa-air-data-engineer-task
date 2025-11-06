@@ -105,15 +105,9 @@ pytest -q
 ––
 
 
-## v2 Updates
-- Fixed SQLAlchemy annotations import error in `models.py` (added `datetime` and `Decimal`).
-- Removed timezone warning in `kpis_memory.monthly_order_trends` by using `tz_convert` + `strftime`.
-- Made SQL/ingest imports **lazy** so `--kpis-memory` runs without importing database modules.
-- Added `--outdir` to save KPI outputs as CSV when using memory mode. Defaults to `outputs/`.
-- Created `outputs/` directory.
 
+ ## Enhancements and Key Features
 
-## v4 Updates
 - Streaming XML ingestion (low memory) via `lxml.iterparse`.
 - CLI flags:
   - `--order-granularity header|line` (default: `header`)
